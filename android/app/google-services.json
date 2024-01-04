@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "429413328456",
+    "project_id": "fir-practise-40252",
+    "storage_bucket": "fir-practise-40252.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:429413328456:android:05854fc699cb72df041a7d",
+        "android_client_info": {
+          "package_name": "com.example.chandu_firebase_module_practise"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAFZx3dqfgMPIG2p5gewbaCespajw8qgnw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
