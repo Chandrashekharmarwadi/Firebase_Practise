@@ -18,7 +18,7 @@ class _SignInState extends State<SignIn> {
 
   SignIn(String email , String password)async{
     if(email==""&& password==""){
-      return log("Enter Required field");
+      return UiHelper.CustomAlertBox(context, "Enter Required Field");
     }
     else{
       try{
@@ -28,7 +28,7 @@ class _SignInState extends State<SignIn> {
         });
       }
       on FirebaseAuthException catch(ex){
-        return log(ex.code.toString());
+        return UiHelper.CustomAlertBox(context, ex.code.toString());
       }
     }
   }

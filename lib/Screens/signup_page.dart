@@ -19,17 +19,17 @@ class _SignInState extends State<SignUp> {
 
   SignUp(String email, String password)async{
     if(email==""&&password==""){
-      return log("Enter required field");
+      return UiHelper.CustomAlertBox(context, "Enter required field");
     }
     else{
      UserCredential? userCredential;
      try{
        userCredential=await FirebaseAuth.instance.createUserWithEmailAndPassword(email: email, password: password).then((value) {
-         log("user created");
+         return UiHelper.CustomAlertBox(context, "User Created");
        });
      }
      on FirebaseAuthException catch (ex){
-       log(ex.code.toString());
+       return UiHelper.CustomAlertBox(context, ex.code.toString());
      }
     }
   }
