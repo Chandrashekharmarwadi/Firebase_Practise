@@ -1,5 +1,6 @@
 import 'dart:developer';
 
+import 'package:chandu_firebase_module_practise/Screens/forgatepassward_page.dart';
 import 'package:chandu_firebase_module_practise/Screens/home_screen.dart';
 import 'package:chandu_firebase_module_practise/Widgets/uihelper_class.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -47,9 +48,17 @@ class _SignInState extends State<SignIn> {
           Text("Sign In",style: TextStyle(fontSize: 32,fontWeight: FontWeight.bold),),
           UiHelper.CustomTextField(emailController, "Enter Email", false, Icons.mail),
           UiHelper.CustomTextField(passwordController, "Enter Password", false, Icons.lock),
-          ElevatedButton(onPressed: (){
-            SignIn(emailController.text.toString(), passwordController.text.toString());
-          }, child: Text("Sign In"))
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              ElevatedButton(onPressed: (){
+                SignIn(emailController.text.toString(), passwordController.text.toString());
+              }, child: Text("Sign In")),
+              TextButton(onPressed: (){
+                Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>ForgatePassword()));
+              }, child: Text("Forgate Password"))
+            ],
+          )
         ],
       ),
     );
