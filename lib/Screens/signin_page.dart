@@ -2,9 +2,12 @@ import 'dart:developer';
 
 import 'package:chandu_firebase_module_practise/Screens/forgatepassward_page.dart';
 import 'package:chandu_firebase_module_practise/Screens/home_screen.dart';
+import 'package:chandu_firebase_module_practise/Screens/verify_user.dart';
 import 'package:chandu_firebase_module_practise/Widgets/uihelper_class.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+
 
 class SignIn extends StatefulWidget {
   const SignIn({super.key});
@@ -58,7 +61,10 @@ class _SignInState extends State<SignIn> {
                 Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>ForgatePassword()));
               }, child: Text("Forgate Password"))
             ],
-          )
+          ),
+          ElevatedButton(onPressed: (){
+            Navigator.push(context, MaterialPageRoute(builder: (context)=>VerifyUser()));
+          }, child: Text("Verify"))
         ],
       ),
     );

@@ -1,8 +1,11 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 
+import 'Screens/add_data.dart';
 import 'Screens/check_user.dart';
+import 'Screens/signin_page.dart';
 import 'Screens/signup_page.dart';
+import 'Screens/verify_user.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -38,7 +41,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: CheckUser(),
+      home:SignUp(),
     );
   }
 }

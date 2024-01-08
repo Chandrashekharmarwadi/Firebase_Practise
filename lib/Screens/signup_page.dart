@@ -2,6 +2,7 @@
 
 import 'package:chandu_firebase_module_practise/Screens/signin_page.dart';
 import 'package:chandu_firebase_module_practise/Widgets/uihelper_class.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'dart:developer';
@@ -26,6 +27,13 @@ class _SignInState extends State<SignUp> {
      try{
        userCredential=await FirebaseAuth.instance.createUserWithEmailAndPassword(email: email, password: password).then((value) {
          return UiHelper.CustomAlertBox(context, "User Created");
+       }).then((value){
+         FirebaseFirestore.instance.collection("User").doc(email).set({
+           "Email":email,
+           "Password":password
+         });
+       }).then((value){
+         log("Data Inserted");
        });
      }
      on FirebaseAuthException catch (ex){

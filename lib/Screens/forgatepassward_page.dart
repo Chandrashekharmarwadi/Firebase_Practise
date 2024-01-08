@@ -18,9 +18,14 @@ class _ForgatePasswordState extends State<ForgatePassword> {
       return UiHelper.CustomAlertBox(context, "Email is required");
     }
     else{
-        FirebaseAuth.instance.sendPasswordResetEmail(email: email).then((value){
-          return UiHelper.CustomAlertBox(context, "Password reset mail has been send on email Account");
-        });
+        try{
+          FirebaseAuth.instance.sendPasswordResetEmail(email: email).then((value){
+            return UiHelper.CustomAlertBox(context, "Password reset mail has been send on email Account");
+          });
+        }
+        catch (e){
+          return UiHelper.CustomAlertBox(context, e.toString());
+        }
     }
   }
 
