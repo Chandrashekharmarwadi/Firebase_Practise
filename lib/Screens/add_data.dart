@@ -22,7 +22,7 @@ class _AddDataState extends State<AddData> {
     else{
       FirebaseFirestore.instance.collection("Notes").doc(title).set({
         "Title":title,
-        "Description":desc,
+        // "Description":desc,
       }).then((value){
         return log("Data Inserted");
       });

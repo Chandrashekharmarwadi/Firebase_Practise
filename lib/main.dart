@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 
 import 'Screens/add_data.dart';
 import 'Screens/check_user.dart';
+import 'Screens/fetch_data.dart';
+import 'Screens/profile_upload.dart';
 import 'Screens/signin_page.dart';
 import 'Screens/signup_page.dart';
 import 'Screens/verify_user.dart';
@@ -41,7 +43,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home:SignUp(),
+      home:UploadProfile(),
     );
   }
 }
