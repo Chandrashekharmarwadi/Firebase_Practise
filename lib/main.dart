@@ -1,9 +1,12 @@
+import 'package:chandu_firebase_module_practise/Services/notificationservise.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 
 import 'Screens/add_data.dart';
+import 'Screens/buildergridview.dart';
 import 'Screens/check_user.dart';
 import 'Screens/fetch_data.dart';
+import 'Screens/gridView.dart';
 import 'Screens/profile_upload.dart';
 import 'Screens/signin_page.dart';
 import 'Screens/signup_page.dart';
@@ -12,6 +15,7 @@ import 'Screens/verify_user.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
+  await NotificationService.initialize();
   runApp(const MyApp());
 }
 
@@ -43,7 +47,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home:UploadProfile(),
+      home:gridview02(),
     );
   }
 }
