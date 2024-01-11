@@ -20,6 +20,7 @@ class _VerifyUserState extends State<VerifyUser> {
         title: Text("Verify User"),
         centerTitle: true,
       ),
+      //Phone Authentication Not Working
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [

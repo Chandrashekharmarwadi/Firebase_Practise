@@ -2,6 +2,8 @@ import 'dart:developer';
 
 import 'package:firebase_messaging/firebase_messaging.dart';
 
+
+//Background Notification Not Fire
 Future<void>BackgroundHandler(RemoteMessage remoteMessage)async{
   log("Message Received ${remoteMessage.notification!.title}");
 }

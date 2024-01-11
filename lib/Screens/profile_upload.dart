@@ -3,7 +3,6 @@ import 'dart:io';
 
 import 'package:chandu_firebase_module_practise/Widgets/uihelper_class.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
@@ -82,7 +81,7 @@ class _UploadProfileState extends State<UploadProfile> {
           );
         });
   }
-
+// Profile Upload Not Working
   @override
   Widget build(BuildContext context) {
     return Scaffold(
