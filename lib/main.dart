@@ -2,6 +2,9 @@ import 'package:chandu_firebase_module_practise/Services/notificationservise.dar
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 
+import 'Chat_App_Screens/check_chat_user_app.dart';
+import 'Chat_App_Screens/log_in_screen.dart';
+import 'Chat_App_Screens/sign_up_screen.dart';
 import 'Screens/add_data.dart';
 import 'Screens/buildergridview.dart';
 import 'Screens/check_user.dart';
@@ -47,7 +50,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home:gridview02(),
+      home:CheckChatUserApp(),
     );
   }
 }
