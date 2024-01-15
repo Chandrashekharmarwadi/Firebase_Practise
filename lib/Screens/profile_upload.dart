@@ -1,6 +1,8 @@
 import 'dart:developer';
 import 'dart:io';
 
+import 'package:chandu_firebase_module_practise/Screens/fetch_data.dart';
+import 'package:chandu_firebase_module_practise/Screens/fetch_profile.dart';
 import 'package:chandu_firebase_module_practise/Widgets/uihelper_class.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_storage/firebase_storage.dart';
@@ -117,6 +119,7 @@ class _UploadProfileState extends State<UploadProfile> {
           ElevatedButton(
               onPressed: () {
                 auth(imagenameController.text.toString());
+                Navigator.push(context, MaterialPageRoute(builder: (context)=>FetchProfile()));
               },
               child: Text("Save")),
         ],
